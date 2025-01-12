@@ -1,0 +1,28 @@
+/* header */
+
+.header {
+    padding: 5px 20px;
+    background-color: rgb(78, 78, 78);
+}
+
+.header_logo img {
+    width: 25px;
+}
+.header_logo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header_toggle a span {
+    color: #adadad;
+    opacity: 1;
+}
+.header_toggle {
+    z-index: 100000;
+}
+@media screen and (max-width: 1024px) {
+    .header_toggle a span {
+        color: #adadad;
+        opacity: 1;
+    }
+}
