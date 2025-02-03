@@ -1,0 +1,38 @@
+.notification {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    animation: fadeInOut 3s forwards;
+}
+
+.notification.success {
+    background-color: #4caf50;
+    /* لون النجاح */
+}
+
+.notification.error {
+    background-color: #f44336;
+    /* لون الخطأ */
+}
+
+@keyframes fadeInOut {
+    0% {
+        opacity: 0;
+    }
+    10%,
+    90% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}

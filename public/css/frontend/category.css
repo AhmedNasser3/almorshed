@@ -8,21 +8,26 @@
     justify-content: space-between;
     align-items: center;
 }
+
 .category_links {
     display: flex;
 }
+
 .category_link {
     font-size: 1.2rem;
     padding: 0 10px;
 }
+
 .category_link a {
     color: #276225;
     transition: ease all 0.4s;
 }
+
 .category_link a:hover {
     transition: ease all 0.4s;
     color: #3fab3b;
 }
+
 .category_icons a i {
     padding: 10px;
     border-radius: 10px;
@@ -32,13 +37,15 @@
     font-weight: 100;
     box-shadow: 0px 5px 2px #0000002e;
 }
+
 .category_btns {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
+
 .category_btns a {
-    background: linear-gradient(to right, #5cb57799, #2cffca98);
+    background: #009978;
     padding: 5px 20px;
     border-radius: 10px;
     box-shadow: 0px 5px 2px #1313131c;

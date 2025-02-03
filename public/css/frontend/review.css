@@ -1,0 +1,121 @@
+/* تنسيق العنوان */
+
+h3 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+
+/* تنسيق القسم الذي يحتوي على التقييمات */
+
+.reviews {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+
+/* تنسيق كل عنصر مراجعة */
+
+.review_item {
+    background: #f9f9f9;
+    padding: 15px;
+    margin: 10px 0;
+    width: 80%;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+/* تنسيق التقييم (النجوم) */
+
+.review_rating {
+    color: #f39c12;
+    font-size: 18px;
+}
+
+
+/* تنسيق نموذج إضافة التقييم */
+
+.review_box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 60%;
+    margin: 0 auto;
+}
+
+
+/* تنسيق النجوم في نموذج التقييم */
+
+.rating_section {
+    margin-bottom: 20px;
+}
+
+.review_stars_icons {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+label.star {
+    font-size: 30px;
+    cursor: pointer;
+    color: #ccc;
+    transition: color 0.3s;
+}
+
+input[type="radio"]:checked~label.star,
+input[type="radio"]:hover~label.star {
+    color: #f39c12;
+}
+
+
+/* تنسيق الحقل النصي */
+
+.review_text_section {
+    margin-bottom: 20px;
+}
+
+textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    resize: vertical;
+}
+
+textarea:focus {
+    outline: none;
+    border-color: #f39c12;
+}
+
+
+/* تنسيق زر الإرسال */
+
+.submit_btn {
+    padding: 10px 20px;
+    background-color: #f39c12;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.submit_btn:hover {
+    background-color: #e67e22;
+}

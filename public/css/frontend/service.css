@@ -1,0 +1,152 @@
+.service {
+    min-height: 100vh;
+    padding: 5% 10%;
+}
+
+.service_head {
+    padding: 0 0 10px 0;
+    border-bottom: 1px solid #13131323;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.service_title {
+    display: flex;
+    align-items: center;
+}
+
+.service_title h2 {
+    padding: 0 0 0 10px;
+    color: #3f8a7d;
+    font-size: 2.3rem;
+}
+
+.service_title p {
+    color: #51767d;
+    border-bottom: 1px solid #5fa8b8;
+    font-size: 1.2rem;
+}
+
+.service_btn button {
+    cursor: pointer;
+    transition: all ease .4s;
+    background-color: #51767d;
+    border: none;
+    border-radius: 10px;
+    padding: 5px 20px;
+    font-size: 1.2rem;
+}
+
+.service_btn:hover button {
+    transition: all ease .4s;
+    background-color: #d7e8ec;
+    border: none;
+    border-radius: 10px;
+    padding: 5px 20px;
+    font-size: 1.2rem;
+}
+
+.service_btn button a {
+    transition: all ease .4s;
+    color: white;
+}
+
+.service_btn:hover button a {
+    transition: all ease .4s;
+    color: #51767d;
+}
+
+
+/* service body */
+
+.service_body {
+    padding: 5% 0 0 0;
+}
+
+.service_name {
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #2f3e42;
+}
+
+.service_name h3 {
+    color: #ffffff;
+    font-size: 2rem;
+}
+
+.service_name h3 span {
+    color: #ffffff;
+}
+
+.service_name p {
+    color: #d8d8d8;
+    font-size: 1.3rem;
+}
+
+.service_name p span {
+    font-weight: 600;
+    color: #ffffff;
+    font-size: 1.3rem;
+}
+
+.service_services {
+    padding: 5% 0 0 0;
+    background-color: #2f3e42;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.service_services_img img {
+    width: 50px;
+}
+
+.service_body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.service_services_bg {
+    padding: 5px 15px;
+    box-shadow: 0px 5px 2px #13131322;
+    border-radius: 10px;
+    width: 360px;
+    background-color: white;
+}
+
+.service_services_title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.service_services_description {
+    display: flex;
+    align-items: center;
+}
+
+.service_services_img {
+    padding: 0 0 0 10px;
+}
+
+.service_services_title h2 {
+    color: #2f3e42;
+    font-size: 1.6rem;
+}
+
+.service_services_title div h3 {
+    color: #2f3e42;
+    font-size: 1.3rem;
+}
+
+.service_services_description h3 {
+    color: #2f3e42;
+    font-size: 1.3rem;
+}
+
+.service_services_data a {
+    display: grid;
+    flex-wrap: wrap;
+    gap: 1rem;
+}

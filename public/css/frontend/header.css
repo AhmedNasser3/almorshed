@@ -7,9 +7,11 @@
     justify-content: space-between;
     align-items: center;
 }
+
 .header_img {
     padding: 5px 0 0 0;
 }
+
 .header_img img {
     width: 22px;
 }
@@ -26,6 +28,7 @@
 .header_text h3 a {
     color: #269900;
 }
+
 
 /* header body */
 
@@ -58,6 +61,7 @@
     justify-content: space-between;
 }
 
+
 /* search bar */
 
 .header_body_sr input {
@@ -81,7 +85,7 @@
     align-items: center;
     justify-content: center;
     margin-right: 5px;
-    background: linear-gradient(to right, #5cb57799, #2cffca98);
+    background: #009978;
     box-shadow: 0 5px 2px #13131357;
     padding: 10px;
     border-radius: 10px;

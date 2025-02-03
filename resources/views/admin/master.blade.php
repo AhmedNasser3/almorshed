@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="{{ asset('css/admin/header.css') }}">
     {{--  sidebar css  --}}
     <link rel="stylesheet" href="{{ asset('css/admin/sidebar.css') }}">
+    {{--  notification css  --}}
+    <link rel="stylesheet" href="{{ asset('css/admin/notification.css') }}">
     {{--  adminsCreate css  --}}
     <link rel="stylesheet" href="{{ asset('css/admin/createUsers/admins.css') }}">
     <title>Almorshed</title>

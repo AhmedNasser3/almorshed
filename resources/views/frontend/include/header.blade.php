@@ -23,7 +23,10 @@
                                 <input type="search" placeholder="البحث">
                             </div>
                             <div class="header_body_logo">
-                                <img src="{{ asset('images/الشعار.png') }}" alt="">
+                                <a href="/">
+                                    <img src="{{ asset('images/الشعار.png') }}" alt="">
+                                </a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -31,4 +34,3 @@
             </div>
         </div>
     </div>
-</div>

@@ -1,0 +1,29 @@
+.test_banner {
+    margin: 3% 0;
+    padding: 30px 5%;
+    height: 70vh;
+    background-color: #2f3e42;
+}
+
+.test_banner_data {
+    text-align: right;
+    height: 70vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.test_banner_img img {
+    width: 600px;
+}
+
+.test_banner_test h3 {
+    padding: 0 0 20px 0;
+    color: #ffffff;
+    font-size: 2.6rem;
+}
+
+.test_banner_test p {
+    width: 700px;
+    color: #e9e9e9;
+}

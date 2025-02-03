@@ -1,10 +1,17 @@
 <?php
 
-use App\Http\Controllers\admin\article\ArticleController;
+use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AppointmentController;
+use App\Http\Controllers\admin\chat\ChatController;
 use App\Http\Controllers\admin\test\TestController;
 use App\Http\Controllers\Admin\users\AdminController;
 use App\Http\Controllers\frontend\home\HomeController;
-use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\admin\review\ReviewController;
+use App\Http\Controllers\admin\article\ArticleController;
+use App\Http\Controllers\admin\service\ServiceController;
+use App\Http\Controllers\admin\reservation\ReservationController;
+use App\Http\Controllers\admin\doctorService\DoctorServiceController;
+use App\Http\Controllers\admin\seo\SeoController;
 
 Route::get('/', [HomeController::class, 'index'])->name('home.page');
 Route::get('/admin', function () {
@@ -44,3 +51,34 @@ Route::controller(TestController::class)->prefix('test')->group(function(){
     Route::put('/update/{TestId}', 'update')->name('test.update');
     Route::post('/delete/{TestId}', 'delete')->name('test.delete');
 });
+// services
+Route::get('/service/{ServicesId}/view-service', [HomeController::class, 'services'])->name('service.view');
+Route::controller(ServiceController::class)->prefix('service')->name('service')->group(function(){
+    Route::get('/create','create')->name('.create');
+    Route::post('/store',action: 'store')->name('.store');
+    Route::put('/update/{service}',action: 'update')->name('.update');
+    Route::get('/delete/{service}',action: 'delete')->name('.delete');
+});
+// chat
+Route::controller(ChatController::class)->prefix('chat')->group(function(){
+    Route::get('/{UserId}', 'view')->name('chat.view');
+});
+// reservation
+Route::controller(ReservationController::class)->prefix('reservation')->group(function(){
+    Route::get('/{id}', 'index')->name('reservation.index');
+});
+// seo Admin
+Route::controller(SeoController::class)->prefix('seo')->group(function(){
+    Route::get('/','index')->name('seo.index');
+    Route::get('/create','create')->name('seo.create');
+    Route::post('/store','store')->name('seo.store');
+    Route::get('/edit/{seoId}',action: 'edit')->name('seo.edit');
+    Route::get('/update/{seoId}','update')->name('seo.update');
+    Route::get('/delete/{seoId}','delete')->name('seo.delete');
+});
+// admin reservation
+Route::controller(DoctorServiceController::class)->prefix('doctor-service')->name('doctor-service')->group(function(){
+    Route::get('/create', 'create')->name('.create');
+    Route::post('/store', 'store')->name('.store');
+});
+Route::post('/reviews/{doctor_id}', [ReviewController::class, 'store'])->name('reviews.store');

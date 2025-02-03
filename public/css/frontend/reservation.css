@@ -1,0 +1,47 @@
+.calendar-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+.calendar-header,
+.calendar-cell {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.calendar-header {
+    background-color: #f4f4f4;
+}
+
+.calendar-cell.selected {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.time-option {
+    font-size: 12px;
+    color: #777;
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+.time-container {
+    display: none;
+    margin-top: 10px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.time-container button {
+    margin: 5px;
+    padding: 10px;
+    font-size: 14px;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}

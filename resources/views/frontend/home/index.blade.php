@@ -7,5 +7,7 @@
 @include('frontend.pages.frontend.cards')
 @include('frontend.pages.frontend.article')
 @include('frontend.pages.frontend.test')
+@include('frontend.chat.whatsApp')
+@include('frontend.chat.ContactUs')
 </div>
 @endsection
