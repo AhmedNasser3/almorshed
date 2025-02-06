@@ -1,17 +1,16 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\AppointmentController;
-use App\Http\Controllers\admin\chat\ChatController;
-use App\Http\Controllers\admin\test\TestController;
+use App\Http\Controllers\Admin\seo\SeoController;
+use App\Http\Controllers\Admin\chat\ChatController;
+use App\Http\Controllers\Admin\test\TestController;
 use App\Http\Controllers\Admin\users\AdminController;
 use App\Http\Controllers\frontend\home\HomeController;
-use App\Http\Controllers\admin\review\ReviewController;
-use App\Http\Controllers\admin\article\ArticleController;
-use App\Http\Controllers\admin\service\ServiceController;
-use App\Http\Controllers\admin\reservation\ReservationController;
-use App\Http\Controllers\admin\doctorService\DoctorServiceController;
-use App\Http\Controllers\admin\seo\SeoController;
+use App\Http\Controllers\Admin\review\ReviewController;
+use App\Http\Controllers\Admin\tiktok\TikTokController;
+use App\Http\Controllers\Admin\article\ArticleController;
+use App\Http\Controllers\Admin\service\ServiceController;
+use App\Http\Controllers\Admin\doctorService\DoctorServiceController;
 
 Route::get('/', [HomeController::class, 'index'])->name('home.page');
 Route::get('/admin', function () {
@@ -63,10 +62,6 @@ Route::controller(ServiceController::class)->prefix('service')->name('service')-
 Route::controller(ChatController::class)->prefix('chat')->group(function(){
     Route::get('/{UserId}', 'view')->name('chat.view');
 });
-// reservation
-Route::controller(ReservationController::class)->prefix('reservation')->group(function(){
-    Route::get('/{id}', 'index')->name('reservation.index');
-});
 // seo Admin
 Route::controller(SeoController::class)->prefix('seo')->group(function(){
     Route::get('/','index')->name('seo.index');
@@ -81,4 +76,10 @@ Route::controller(DoctorServiceController::class)->prefix('doctor-service')->nam
     Route::get('/create', 'create')->name('.create');
     Route::post('/store', 'store')->name('.store');
 });
+// seo tik tok
+Route::get('/tiktok/login', [TikTokController::class, 'redirectToTikTok'])->name('tiktok.login');
+Route::get('/tiktok/callback', [TikTokController::class, 'handleCallback']);
+Route::get('/tiktok/videos', [TikTokController::class, 'getUserVideos'])->name('tiktok.videos');
 Route::post('/reviews/{doctor_id}', [ReviewController::class, 'store'])->name('reviews.store');
+// reserve
+Route::get('/reserve/{ServicesId}',[HomeController::class, 'reserve'])->name('reserve.page');

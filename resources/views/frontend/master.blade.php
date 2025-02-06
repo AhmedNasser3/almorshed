@@ -9,8 +9,8 @@
     $seo = Seo::first();
     @endphp
     {{--  seo  --}}
-    <meta name="description" content="{{ $seo->meta_description }}">
-    <meta name="keywords" content="{{ $seo->meta_keywords }}">
+    <meta name="description" content="{{ $seo ? $seo->meta_description : ''}}">
+    <meta name="keywords" content="{{ $seo ? $seo->meta_keywords  : '' }}">
     <link rel="shortcut icon" href="{{ asset('images/الشعار.png') }}" type="image/x-icon">
     {{--  header css  --}}
     <link rel="stylesheet" href="{{ asset('css/frontend/header.css') }}">
@@ -34,6 +34,8 @@
     <link rel="stylesheet" href="{{ asset('css/frontend/review.css') }}">
     {{--  chat css  --}}
     <link rel="stylesheet" href="{{ asset('css/frontend/chat.css') }}">
+    {{--  login css  --}}
+    <link rel="stylesheet" href="{{ asset('css/frontend/login.css') }}">
     {{--  reservation css  --}}
     <link rel="stylesheet" href="{{ asset('css/frontend/reservation.css') }}">
      {{--  fontAwesome  --}}

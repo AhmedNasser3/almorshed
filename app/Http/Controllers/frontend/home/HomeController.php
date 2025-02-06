@@ -6,6 +6,7 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use App\Models\admin\review\Review;
 use App\Http\Controllers\Controller;
+use App\Models\admin\appointment\Appointment;
 use App\Models\admin\article\Article;
 
 class HomeController extends Controller
@@ -13,13 +14,21 @@ class HomeController extends Controller
     public function index(){
         $services = User::all();
         $articles = Article::all();
-        return view('frontend.home.index',compact('articles','services'));
+        $appointments = Appointment::all();
+        return view('frontend.home.index',compact('articles','services','appointments'));
     }
     // services Controller
-    public function services($ServicesId){
+    public function services($ServicesId)
+    {
         $services = User::findOrFail($ServicesId);
         $reviews = Review::where('doctor_id', $ServicesId)->get();
-        return view('frontend.pages.frontend.services.view',compact('reviews','services'));
+
+        return view('frontend.pages.frontend.services.view', compact('reviews','services'));
+    }
+    public function reserve($ServicesId){
+        $appointments = Appointment::where('doctor_id', $ServicesId)->get();
+        $vacation = Appointment::where('doctor_id', $ServicesId)->get();
+        return view('frontend.pages.frontend.services.reserve',compact('appointments','vacation'));
     }
     // chat
     public function chat(){
