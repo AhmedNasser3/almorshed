@@ -9,6 +9,11 @@ use App\Models\admin\article\Article;
 
 class ArticleController extends Controller
 {
+    public function view($articleId){
+        $article = Article::findOrFail($articleId);
+        $articles = Article::all();
+        return view('frontend.pages.frontend.article.view',data: compact('article','articles'));
+    }
     public function index(){
         $articles = Article::all();
         return view('admin.pages.article.index',compact('articles'));

@@ -116,3 +116,9 @@
     font-size: 2rem;
     color: rgb(145, 255, 169);
 }
+
+@media screen and (max-width:1024px) {
+    .card_boxes_bg {
+        max-width: 350px;
+    }
+}

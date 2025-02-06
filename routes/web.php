@@ -11,11 +11,10 @@ use App\Http\Controllers\Admin\tiktok\TikTokController;
 use App\Http\Controllers\Admin\article\ArticleController;
 use App\Http\Controllers\Admin\service\ServiceController;
 use App\Http\Controllers\Admin\doctorService\DoctorServiceController;
+use App\Http\Controllers\admin\home\AdminHomeController;
 
 Route::get('/', [HomeController::class, 'index'])->name('home.page');
-Route::get('/admin', function () {
-    return view('admin.home.index');
-});
+Route::get('/admin', [AdminHomeController::class, 'index'])->name('admin.page');
 
 // create Admins
 Route::controller(AdminController::class)->prefix('admin')->group(function(){
@@ -34,7 +33,8 @@ Route::controller(AdminController::class)->prefix('moderator')->group(function()
 });
 // create articles
 Route::controller(ArticleController::class)->prefix('article')->group(function(){
-    Route::get('/', 'index')->name('articles.index');
+    Route::get('/{articleId}', 'view')->name('articles.view');
+    Route::get('/admin', 'index')->name('articles.index');
     Route::get('/create', 'create')->name('articles.create');
     Route::post('/store', 'store')->name('articles.store');
     Route::post('/edit/{articleId}', 'edit')->name('articles.edit');

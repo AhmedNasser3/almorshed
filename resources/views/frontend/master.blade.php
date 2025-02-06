@@ -34,8 +34,8 @@
     <link rel="stylesheet" href="{{ asset('css/frontend/review.css') }}">
     {{--  chat css  --}}
     <link rel="stylesheet" href="{{ asset('css/frontend/chat.css') }}">
-    {{--  login css  --}}
-    <link rel="stylesheet" href="{{ asset('css/frontend/login.css') }}">
+    {{--  article css  --}}
+    <link rel="stylesheet" href="{{ asset('css/frontend/article.css') }}">
     {{--  reservation css  --}}
     <link rel="stylesheet" href="{{ asset('css/frontend/reservation.css') }}">
      {{--  fontAwesome  --}}

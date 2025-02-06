@@ -54,6 +54,7 @@
                                                 </div>
                                             </div>
                                         </div>
+
                                         <div class="service_services_bg">
                                             <div class="service_services_cn">
                                                 <div class="service_services_title">
@@ -66,7 +67,7 @@
                                                     <div class="service_services_img">
                                                         <img src="{{ asset('images/الشعار.png') }}" alt="">
                                                     </div>
-                                                    <h3>مكالمة هاتفية</h3>
+                                                    <h3>محادثة شات</h3>
                                                 </div>
                                             </div>
                                         </div>
@@ -82,23 +83,7 @@
                                                     <div class="service_services_img">
                                                         <img src="{{ asset('images/الشعار.png') }}" alt="">
                                                     </div>
-                                                    <h3>مكالمة هاتفية</h3>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="service_services_bg">
-                                            <div class="service_services_cn">
-                                                <div class="service_services_title">
-                                                    <h2>الخدمة</h2>
-                                                    <div class="service_services_price">
-                                                        <h3>30.د</h3>
-                                                    </div>
-                                                </div>
-                                                <div class="service_services_description">
-                                                    <div class="service_services_img">
-                                                        <img src="{{ asset('images/الشعار.png') }}" alt="">
-                                                    </div>
-                                                    <h3>مكالمة هاتفية</h3>
+                                                    <h3>مقابلة شخصية</h3>
                                                 </div>
                                             </div>
                                         </div>

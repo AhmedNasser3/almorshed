@@ -1,48 +1,56 @@
 <x-guest-layout>
-    <x-authentication-card>
-        <x-slot name="logo">
-            <x-authentication-card-logo />
-        </x-slot>
-
-        <x-validation-errors class="mb-4" />
-
-        @session('status')
-            <div class="mb-4 font-medium text-sm text-green-600">
-                {{ $value }}
-            </div>
-        @endsession
-
-        <form method="POST" action="{{ route('login') }}">
-            @csrf
-
-            <div>
-                <x-label for="email" value="{{ __('Email') }}" />
-                <x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus autocomplete="username" />
+    <div class="min-h-screen flex items-center justify-center bg-gradient-to-r  ">
+        <div class="w-full max-w-md bg-white rounded-2xl shadow-lg p-8 space-y-6">
+            <div class="flex justify-center">
+                <div class="flex justify-center">
+                    <img src="{{ asset('images/الشعار.png') }}" alt="الشعار" style="width: 100px">
+                </div>
             </div>
 
-            <div class="mt-4">
-                <x-label for="password" value="{{ __('Password') }}" />
-                <x-input id="password" class="block mt-1 w-full" type="password" name="password" required autocomplete="current-password" />
-            </div>
+            <h2 class="text-center text-2xl font-bold text-gray-700">تسجيل الدخول</h2>
 
-            <div class="block mt-4">
-                <label for="remember_me" class="flex items-center">
-                    <x-checkbox id="remember_me" name="remember" />
-                    <span class="ms-2 text-sm text-gray-600">{{ __('Remember me') }}</span>
-                </label>
-            </div>
+            <x-validation-errors class="mb-4" />
 
-            <div class="flex items-center justify-end mt-4">
-                @if (Route::has('password.request'))
-                    <a class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" href="{{ route('password.request') }}">
-                        {{ __('Forgot your password?') }}
-                    </a>
-                @endif
+            @if(session('status'))
+                <div class="mb-4 text-green-600 text-sm text-center font-medium">
+                    {{ session('status') }}
+                </div>
+            @endif
 
-                <x-button class="ms-4">
-                    {{ __('Log in') }}
-                </x-button>
-            </div>
-        </form>
-    </x-authentication-card>
+            <form method="POST" action="{{ route('login') }}">
+                @csrf
+
+                <div>
+                    <x-label for="email" value="البريد الإلكتروني" class="text-gray-700" />
+                    <x-input id="email" class="block mt-2 w-full border-gray-300 focus:border-green-300 focus:border-green-300 rounded-lg shadow-sm" type="email" name="email" :value="old('email')" required autofocus autocomplete="username" />
+                </div>
+
+                <div class="mt-4">
+                    <x-label for="password" value="كلمة المرور" class="text-gray-700" />
+                    <x-input id="password" class="block mt-2 w-full border-gray-300 focus:border-green-300 focus:border-green-300 rounded-lg shadow-sm" type="password" name="password" required autocomplete="current-password" />
+                </div>
+
+                <div class="flex items-center justify-between mt-4">
+                    <label for="remember_me" class="flex items-center text-gray-600">
+                        <x-checkbox id="remember_me" name="remember" class="focus:border-green-300" />
+                        <span class="ml-2 text-sm">تذكرني</span>
+                    </label>
+
+                    @if (Route::has('password.request'))
+                        <a class="text-sm focus:border-green-300 hover:underline" href="{{ route('password.request') }}">نسيت كلمة المرور؟</a>
+                    @endif
+                </div>
+
+                <div class="mt-6">
+                    <x-button class="w-full bg-green-400 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded-lg shadow-md">
+                        تسجيل الدخول
+                    </x-button>
+                </div>
+            </form>
+
+            <p class="text-center text-gray-600 text-sm">
+                ليس لديك حساب؟ <a href="{{ route('register') }}" class="focus:border-green-300 hover:underline font-semibold">إنشاء حساب</a>
+            </p>
+        </div>
+    </div>
 </x-guest-layout>

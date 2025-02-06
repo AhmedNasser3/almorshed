@@ -12,7 +12,7 @@ use App\Models\admin\article\Article;
 class HomeController extends Controller
 {
     public function index(){
-        $services = User::all();
+        $services = User::where('role', 'moderator')->get();
         $articles = Article::all();
         $appointments = Appointment::all();
         return view('frontend.home.index',compact('articles','services','appointments'));

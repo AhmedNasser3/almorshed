@@ -52,3 +52,9 @@
     margin: 0 10px;
     color: white;
 }
+
+@media screen and (max-width:1024px) {
+    .category_links {
+        display: none;
+    }
+}

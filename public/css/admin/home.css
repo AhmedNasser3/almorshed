@@ -93,9 +93,13 @@
     padding: 10px;
 }
 
+
 /* alarm */
 
 .home_alarm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 10px 0;
 }
 
@@ -142,6 +146,7 @@
 .home_alarm {
     opacity: 1;
     transition: opacity 0.3s ease-in-out;
+    overflow-x: auto;
 }
 
 .home_alarm.show {
@@ -149,9 +154,13 @@
     display: none;
 }
 
+
 /* Account */
 
 .account {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 2% 0 0 0;
 }
 
@@ -160,6 +169,8 @@
     height: 200px;
     padding: 20px;
     border-radius: 10px;
+    overflow-x: auto;
+    width: 100%;
 }
 
 .account_title {
@@ -185,7 +196,10 @@
     text-align: center;
 }
 
+
 /* notify index */
+
+
 /* notify index */
 
 .notify {
@@ -225,7 +239,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow-x: auto; /* تم تفعيل overflow-x بشكل مناسب */
+    overflow-x: auto;
+    /* تم تفعيل overflow-x بشكل مناسب */
 }
 
 table {
@@ -281,9 +296,12 @@ tr {
 }
 
 .notify_table {
-    overflow-x: auto; /* تفعيل الـ overflow-x لتحسين التمرير الأفقي */
-    padding: 0 20px; /* إضافة padding بشكل مناسب */
-    max-width: 100%; /* ضمان تناسب الجدول مع العرض */
+    overflow-x: auto;
+    /* تفعيل الـ overflow-x لتحسين التمرير الأفقي */
+    padding: 0 20px;
+    /* إضافة padding بشكل مناسب */
+    max-width: 100%;
+    /* ضمان تناسب الجدول مع العرض */
 }
 
 @media screen and (max-width: 1024px) {
@@ -294,7 +312,8 @@ tr {
     }
     .notify_container {
         max-width: 100%;
-        padding: 10px;
+        padding: 0;
+        width: 600px;
     }
     table {
         width: 100%;
@@ -308,7 +327,8 @@ tr {
 
 @media screen and (max-width: 768px) {
     .notify_container {
-        padding: 15px;
+        padding: 0;
+        width: 425px;
     }
     .notify_title_cn {
         flex-direction: column;
@@ -322,12 +342,10 @@ tr {
     }
     .table th,
     .table td {
-        font-size: 12px; /* تصغير حجم الخط في الأجهزة الصغيرة */
+        font-size: 12px;
+        /* تصغير حجم الخط في الأجهزة الصغيرة */
     }
 }
 
-/* admin notify */
 
-.admin_container {
-    padding: 0 10%;
-}
+/* admin notify */

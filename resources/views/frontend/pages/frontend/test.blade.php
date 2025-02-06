@@ -32,7 +32,7 @@
         <div class="card_content">
             <div class="card_data">
                 <div class="card_boxes">
-                    @foreach ($articles as $article)
+                    {{--  @foreach ($articles as $article)
                     <a href="">
                         <div class="card_boxes_bg" style="height: 100px;width:200px">
                             <div class="card_boxes_cn">
@@ -50,102 +50,10 @@
                             </div>
                         </div>
                     </a>
-                        @endforeach
-                    @foreach ($articles as $article)
-                    <a href="">
-                        <div class="card_boxes_bg" style="height: 100px;width:200px">
-                  <div class="card_boxes_cn">
-                                <h3><i class="fa-solid fa-check"></i></h3>
-                            </div>
-                        <div class="card_boxes_description">
-                            <div class="card_boxes_title">
-                                <h3>الاختبار</h3>
-                            </div>
-                                <div class="card_boxes_stars">
-                                    <div class="card_boxes_small_description" style="color: #131313">
-                                        <h3>{{ $article->title }}</h3>
-                                    </div>
-                                </div>
-                            </div>
+                        @endforeach  --}}
+                        <div>
+                            <p>قيد التطوير</p>
                         </div>
-                    </a>
-                        @endforeach
-                    @foreach ($articles as $article)
-                    <a href="">
-                        <div class="card_boxes_bg" style="height: 100px;width:200px">
-                  <div class="card_boxes_cn">
-                                <h3><i class="fa-solid fa-check"></i></h3>
-                            </div>
-                        <div class="card_boxes_description">
-                            <div class="card_boxes_title">
-                                <h3>الاختبار</h3>
-                            </div>
-                                <div class="card_boxes_stars">
-                                    <div class="card_boxes_small_description" style="color: #131313">
-                                        <h3>{{ $article->title }}</h3>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                        @endforeach
-                    @foreach ($articles as $article)
-                    <a href="">
-                        <div class="card_boxes_bg" style="height: 100px;width:200px">
-                  <div class="card_boxes_cn">
-                                <h3><i class="fa-solid fa-check"></i></h3>
-                            </div>
-                        <div class="card_boxes_description">
-                            <div class="card_boxes_title">
-                                <h3>الاختبار</h3>
-                            </div>
-                                <div class="card_boxes_stars">
-                                    <div class="card_boxes_small_description" style="color: #131313">
-                                        <h3>{{ $article->title }}</h3>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                        @endforeach
-                    @foreach ($articles as $article)
-                    <a href="">
-                        <div class="card_boxes_bg" style="height: 100px;width:200px">
-                  <div class="card_boxes_cn">
-                                <h3><i class="fa-solid fa-check"></i></h3>
-                            </div>
-                        <div class="card_boxes_description">
-                            <div class="card_boxes_title">
-                                <h3>الاختبار</h3>
-                            </div>
-                                <div class="card_boxes_stars">
-                                    <div class="card_boxes_small_description" style="color: #131313">
-                                        <h3>{{ $article->title }}</h3>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                        @endforeach
-                    @foreach ($articles as $article)
-                    <a href="">
-                        <div class="card_boxes_bg" style="height: 100px;width:200px">
-                  <div class="card_boxes_cn">
-                                <h3><i class="fa-solid fa-check"></i></h3>
-                            </div>
-                        <div class="card_boxes_description">
-                            <div class="card_boxes_title">
-                                <h3>الاختبار</h3>
-                            </div>
-                                <div class="card_boxes_stars">
-                                    <div class="card_boxes_small_description" style="color: #131313">
-                                        <h3>{{ $article->title }}</h3>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                        @endforeach
                     </div>
                 </div>
         </div>
